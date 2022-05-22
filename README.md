@@ -18,5 +18,13 @@ jobs:
       platforms: 'linux/amd64,linux/arm64'    #  (default)
       registry: 'ghcr.io'                     #  (default)
       image_name: ${{ github.repository }}    #  (default)
+      tags: |                                 #  (default)
+        type=schedule
+        type=ref,event=branch
+        type=ref,event=pr
+        type=semver,pattern={{version}}
+        type=semver,pattern={{major}}.{{minor}}
+        type=semver,pattern={{major}}
+        type=sha
 
 ```
