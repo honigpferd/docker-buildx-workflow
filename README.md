@@ -14,6 +14,10 @@ jobs:
     permissions:
       contents: read
       packages: write
+
+```
+optionally override defaults and adapt params to your needs
+```YAML
     with:
       platforms: 'linux/amd64,linux/arm64'    #  (default)
       registry: 'ghcr.io'                     #  (default)
