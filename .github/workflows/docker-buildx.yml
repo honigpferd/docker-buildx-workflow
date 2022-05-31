@@ -78,6 +78,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Lint Dockerfile
+        uses: hadolint/hadolint-action@0a6d062e780d218ea909a18365e0ab2e36d09612
+        with:
+          verbose: true
+
 #      # Install the cosign tool except on PR
 #      # https://github.com/sigstore/cosign-installer
 #      - name: Install cosign
